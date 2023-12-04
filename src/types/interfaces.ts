@@ -33,6 +33,14 @@ interface IJobScope {
   description: string;
 }
 
+interface IJobPeriod {
+  _id: string;
+  name: string;
+  minTerm: number;
+  maxTerm: number;
+  description: string;
+}
+
 interface IJobExperience {
   _id: string;
   name: string;
