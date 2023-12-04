@@ -7,6 +7,18 @@ interface IUser {
   password: string;
   role: string;
   status: number;
+
+  shipping: {
+    firstName: string;
+    lastName: string;
+    card: string;
+  };
+
+  credit: {
+    firstName: string;
+    lastName: string;
+    card: string;
+  };
 }
 
 interface IJobSkill {
