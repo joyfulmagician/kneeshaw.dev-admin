@@ -9,19 +9,19 @@ import {
   SelectValue
 } from "@/components/ui/select";
 import { Input } from "../ui/input";
+import Link from "next/link";
 
 export default function CreateService() {
   return (
     <div className="flex flex-col gap-[30px] p-[100px] text-[black]">
       <div className="flex flex-row justify-end gap-[20px]">
-        <Button type="button" className="bg-[#36322f]">
-          Save
-        </Button>
-        <Button
-          type="button"
-          className="border-[1px] border-[#36322f] bg-transparent text-[black]"
-        >
-          Cancel
+        <Link href="/service">
+          <Button variant="outline" className="w-[80px]">
+            <span className="text-[16px]">Cancel</span>
+          </Button>
+        </Link>
+        <Button type="button" className="w-[80px]">
+          <span className="text-[16px]">Save</span>
         </Button>
       </div>
 
