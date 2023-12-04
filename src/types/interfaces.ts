@@ -9,6 +9,16 @@ interface IUser {
   status: number;
 }
 
+interface IService {
+  _id: string;
+  image: {
+    data: Buffer;
+    contentType: String;
+  };
+  title: string;
+  description: string;
+}
+
 interface IJobSkill {
   _id: string;
   name: string;
