@@ -48,7 +48,9 @@ export default function JobPeriodsList() {
         <TableHeader>
           <TableRow>
             <TableHead className="w-[5%] text-center">ID</TableHead>
-            <TableHead className="w-[20%] text-center">Period</TableHead>
+            <TableHead className="w-[10%] text-center">Name</TableHead>
+
+            <TableHead className="w-[10%] text-center">Period</TableHead>
             <TableHead className="w-[60%] text-center">Description</TableHead>
             <TableHead colSpan={2} className="w-[15%] text-center">
               Action
@@ -60,9 +62,10 @@ export default function JobPeriodsList() {
           {periods.map((period, index) => (
             <TableRow key={period._id}>
               <TableCell className="font-medium">{index + 1}</TableCell>
-              <TableCell className="flex flex-row items-center justify-around">
-                <div className="w-[150px]">{period.name}</div>
-                <div className="flex w-[100px] flex-row items-center justify-between">
+              <TableCell>{period.name}</TableCell>
+
+              <TableCell>
+                <div className="flex flex-row justify-center gap-[12px]">
                   <p>{period.minTerm}</p>
                   <div className="px-[12px]">~</div>
                   <p>{period.maxTerm}</p>
@@ -70,6 +73,7 @@ export default function JobPeriodsList() {
               </TableCell>
 
               <TableCell className="text-left">{period.description}</TableCell>
+
               <TableCell className="flex flex-row items-center justify-center gap-[20px]">
                 <JobPeriodEditDialog
                   id={period._id}
