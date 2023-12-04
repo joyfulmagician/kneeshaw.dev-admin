@@ -27,6 +27,12 @@ interface IJobDatabase {
   description: string;
 }
 
+interface IJobScope {
+  _id: string;
+  name: string;
+  description: string;
+}
+
 interface IJobBudget {
   _id: string;
   name: string;
