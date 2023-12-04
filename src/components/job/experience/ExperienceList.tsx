@@ -10,18 +10,18 @@ import {
   TableHeader,
   TableRow
 } from "@/components/ui/table";
-import { getAllJobServices } from "@/app/api/JobServiceService";
+import { getAllJobExperiences } from "@/app/api/JobExperienceService";
 
-import JobServiceCreateDialog from "./CreateDialog";
-import JobServiceEditDialog from "./EditDialog";
-import JobServiceDeleteDialog from "./DeleteDialog";
+import JobExperienceCreateDialog from "./CreateDialog";
+import JobExperienceEditDialog from "./EditDialog";
+import JobExperienceDeleteDialog from "./DeleteDialog";
 
-export default function JobServicesList() {
-  const [services, setServices] = useState<IJobService[]>([]);
+export default function JobExperiencesList() {
+  const [experiences, setExperiences] = useState<IJobExperience[]>([]);
 
   const initialize = async () => {
-    const res = await getAllJobServices();
-    setServices(res.data.data);
+    const res = await getAllJobExperiences();
+    setExperiences(res.data.data);
   };
 
   const handleCreated = () => {
@@ -42,13 +42,13 @@ export default function JobServicesList() {
 
   return (
     <>
-      <JobServiceCreateDialog onCreated={handleCreated} />
+      <JobExperienceCreateDialog onCreated={handleCreated} />
 
       <Table className="text-center">
         <TableHeader>
           <TableRow>
             <TableHead className="w-[5%] text-center">ID</TableHead>
-            <TableHead className="w-[15%] text-center">Service</TableHead>
+            <TableHead className="w-[15%] text-center">Experience</TableHead>
             <TableHead className="w-[65%] text-center">Description</TableHead>
             <TableHead colSpan={2} className="w-[15%] text-center">
               Action
@@ -57,19 +57,21 @@ export default function JobServicesList() {
         </TableHeader>
 
         <TableBody>
-          {services.map((service, index) => (
-            <TableRow key={service._id}>
+          {experiences.map((experience, index) => (
+            <TableRow key={experience._id}>
               <TableCell className="font-medium">{index + 1}</TableCell>
-              <TableCell>{service.name}</TableCell>
-              <TableCell className="text-left">{service.description}</TableCell>
+              <TableCell>{experience.name}</TableCell>
+              <TableCell className="text-left">
+                {experience.description}
+              </TableCell>
               <TableCell className="flex flex-row items-center justify-center gap-[20px]">
-                <JobServiceEditDialog
-                  id={service._id}
+                <JobExperienceEditDialog
+                  id={experience._id}
                   onUpdated={handleUpdated}
                 />
 
-                <JobServiceDeleteDialog
-                  id={service._id}
+                <JobExperienceDeleteDialog
+                  id={experience._id}
                   onDeleted={handleDeleted}
                 />
               </TableCell>
