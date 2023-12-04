@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { toast } from "react-toastify";
+
 import { MdDeleteOutline } from "react-icons/md";
+import { toast } from "react-toastify";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -16,20 +17,17 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import {
-  deleteJobDatabase,
-  getJobDatabase
-} from "@/app/api/JobDatabaseService";
+import { deleteUser, getUser, updateUser } from "@/app/api/User";
 
-interface JobDatabaseDeleteDialogProps {
+interface UserDeleteDialogProps {
   id: string;
   onDeleted: () => void;
 }
 
-export default function JobDatabaseDeleteDialog({
+export default function UserDeleteDialog({
   id,
   onDeleted
-}: JobDatabaseDeleteDialogProps) {
+}: UserDeleteDialogProps) {
   const [open, setOpen] = useState(false);
   const [values, setValues] = useState<{
     name: string;
@@ -43,10 +41,10 @@ export default function JobDatabaseDeleteDialog({
 
   const handleRemoveClick = async () => {
     try {
-      await deleteJobDatabase(id);
+      await deleteUser(id);
       setOpen(false);
       onDeleted();
-      toast("Job database removed successfully.", { type: "success" });
+      toast("User removed successfully.", { type: "success" });
     } catch (err: any) {
       toast(err.response.data.message, { type: "error" });
     }
@@ -54,7 +52,7 @@ export default function JobDatabaseDeleteDialog({
 
   const initialize = async () => {
     try {
-      const res = await getJobDatabase(id);
+      const res = await getUser(id);
       setValues({
         name: res.data.data.name,
         description: res.data.data.description
@@ -79,10 +77,10 @@ export default function JobDatabaseDeleteDialog({
 
         <DialogContent>
           <DialogHeader>
-            <DialogTitle>Remove Database</DialogTitle>
+            <DialogTitle>Remove User</DialogTitle>
           </DialogHeader>
 
-          <div className="grid gap-4 py-4">
+          {/* <div className="grid gap-4 py-4">
             <div className="grid grid-cols-4 items-center gap-4">
               <Label htmlFor="name" className="text-right">
                 Name
@@ -107,7 +105,7 @@ export default function JobDatabaseDeleteDialog({
                 onChange={handleFieldChange("description")}
               />
             </div>
-          </div>
+          </div> */}
 
           <DialogFooter>
             <DialogClose asChild>
