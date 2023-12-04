@@ -1,9 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-
-import { MdDeleteOutline } from "react-icons/md";
 import { toast } from "react-toastify";
+import { MdDeleteOutline } from "react-icons/md";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -19,8 +18,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import {
   deleteJobDatabase,
-  getJobDatabase,
-  updateJobDatabase
+  getJobDatabase
 } from "@/app/api/JobDatabaseService";
 
 interface JobDatabaseDeleteDialogProps {

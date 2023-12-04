@@ -1,9 +1,10 @@
 "use client";
 
-import { Button } from "../ui/button";
+import Link from "next/link";
 import { HiOutlinePencilSquare } from "react-icons/hi2";
 import { MdDeleteOutline } from "react-icons/md";
-import Link from "next/link";
+
+import { Button } from "../ui/button";
 
 interface Props {
   image: string;

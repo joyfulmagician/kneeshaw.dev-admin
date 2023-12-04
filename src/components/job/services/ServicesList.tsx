@@ -11,10 +11,9 @@ import {
   TableRow
 } from "@/components/ui/table";
 import { getAllJobServices } from "@/app/api/JobServiceService";
-
-import JobServiceCreateDialog from "./CreateDialog";
-import JobServiceEditDialog from "./EditDialog";
-import JobServiceDeleteDialog from "./DeleteDialog";
+import JobServiceCreateDialog from "@/components/job/services/CreateDialog";
+import JobServiceEditDialog from "@/components/job/services/EditDialog";
+import JobServiceDeleteDialog from "@/components/job/services/DeleteDialog";
 
 export default function JobServicesList() {
   const [services, setServices] = useState<IJobService[]>([]);

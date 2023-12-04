@@ -11,10 +11,9 @@ import {
   TableRow
 } from "@/components/ui/table";
 import { getAllJobDatabases } from "@/app/api/JobDatabaseService";
-
-import JobDatabaseCreateDialog from "./CreateDialog";
-import JobDatabaseEditDialog from "./EditDialog";
-import JobDatabaseDeleteDialog from "./DeleteDialog";
+import JobDatabaseCreateDialog from "@/components/job/databases/CreateDialog";
+import JobDatabaseEditDialog from "@/components/job/databases/EditDialog";
+import JobDatabaseDeleteDialog from "@/components/job/databases/DeleteDialog";
 
 export default function JobDatabasesList() {
   const [databases, setDatabases] = useState<IJobDatabase[]>([]);

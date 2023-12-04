@@ -1,9 +1,9 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-
-import { Input } from "../ui/input";
 import Link from "next/link";
+
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 
 export default function CreateBlog() {
   return (
