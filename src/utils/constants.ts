@@ -5,3 +5,8 @@ export const SESSION_STATUS = {
   LOADING: "loading",
   AUTHENTICATED: "authenticated"
 };
+
+export const JOB_BUDGET_TYPE = {
+  RATE: 1,
+  FIXED: 2
+};
