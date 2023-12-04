@@ -61,7 +61,9 @@ export default function JobDatabasesList() {
             <TableRow key={database._id}>
               <TableCell className="font-medium">{index + 1}</TableCell>
               <TableCell>{database.name}</TableCell>
-              <TableCell>{database.description}</TableCell>
+              <TableCell className="text-left">
+                {database.description}
+              </TableCell>
               <TableCell className="flex flex-row items-center justify-center gap-[20px]">
                 <JobDatabaseEditDialog
                   id={database._id}

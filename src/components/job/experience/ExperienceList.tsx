@@ -61,7 +61,9 @@ export default function JobExperiencesList() {
             <TableRow key={experience._id}>
               <TableCell className="font-medium">{index + 1}</TableCell>
               <TableCell>{experience.name}</TableCell>
-              <TableCell>{experience.description}</TableCell>
+              <TableCell className="text-left">
+                {experience.description}
+              </TableCell>
               <TableCell className="flex flex-row items-center justify-center gap-[20px]">
                 <JobExperienceEditDialog
                   id={experience._id}
