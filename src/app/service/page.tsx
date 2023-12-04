@@ -4,6 +4,7 @@ import { SITE_TITLE } from "@/utils/constants";
 import { FaPlus } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 import ServiceCard from "@/components/services/ServiceCard";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: `${SITE_TITLE} - Service`,
@@ -84,10 +85,12 @@ export default function Service() {
   return (
     <main className="mt-[24px] flex flex-col gap-[60px] p-4">
       <div className="mr-[20px] flex justify-end">
-        <Button type="button">
-          <FaPlus className="text-md" />
-          <span className="ml-[5px] text-[16px]">Add</span>
-        </Button>
+        <Link href="service/create">
+          <Button type="button">
+            <FaPlus className="text-md" />
+            <span className="ml-[5px] text-[16px]">Add</span>
+          </Button>
+        </Link>
       </div>
 
       <div className="flex flex-wrap justify-center gap-[60px]">
