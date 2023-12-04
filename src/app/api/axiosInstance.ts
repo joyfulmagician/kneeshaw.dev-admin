@@ -24,4 +24,11 @@ axiosInstance.interceptors.response.use(
   (error) => Promise.reject(error)
 );
 
+export function toQueryString(values: any) {
+  return Object.keys(values)
+    .map((key) => `${key}=${values[key]}`)
+    .filter(Boolean)
+    .join("&");
+}
+
 export default axiosInstance;
