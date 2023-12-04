@@ -55,7 +55,9 @@ export default function Sidebar() {
           href="/service"
           className={clsx(
             "text-[16px] ",
-            pathName.includes("/service") && "font-bold"
+            pathName.includes("/service") &&
+              !pathName.includes("/job") &&
+              "font-bold"
           )}
         >
           Service

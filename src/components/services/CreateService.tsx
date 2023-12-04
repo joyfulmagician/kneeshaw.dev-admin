@@ -1,11 +1,10 @@
 "use client";
 
 import Link from "next/link";
-
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { Input } from "../ui/input";
 
-export default function CreateBlog() {
+export default function CreateService() {
   return (
     <div className="flex flex-col gap-[30px] p-[100px] text-[black]">
       <div className="flex flex-row justify-end gap-[20px]">
@@ -14,7 +13,6 @@ export default function CreateBlog() {
             <span className="text-[16px]">Cancel</span>
           </Button>
         </Link>
-
         <Button type="button" className="w-[80px]">
           <span className="text-[16px]">Save</span>
         </Button>
@@ -28,11 +26,6 @@ export default function CreateBlog() {
 
         <div className="flex items-center gap-[18px]">
           <p className="w-[100px] text-center">Title:</p>
-          <Input type="text" className="w-[500px]"></Input>
-        </div>
-
-        <div className="flex items-center gap-[18px]">
-          <p className="w-[100px] text-center">Subtitle:</p>
           <Input type="text" className="w-[500px]"></Input>
         </div>
 
