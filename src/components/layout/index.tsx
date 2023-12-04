@@ -8,10 +8,12 @@ interface LayoutProps {
 
 export default function Layout({ children }: LayoutProps) {
   return (
-    <div className="flex flex-row gap-2">
+    <main className="flex flex-row gap-2">
       <Sidebar />
 
-      <div className="flex flex-1 flex-col p-4">{children}</div>
-    </div>
+      <div className="flex max-h-[100vh] flex-1 flex-col overflow-auto p-4">
+        {children}
+      </div>
+    </main>
   );
 }

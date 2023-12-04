@@ -11,3 +11,8 @@ export const USER_STATUS = {
   ENABLED: 1,
   DISABLED: 2
 };
+
+export const JOB_BUDGET_TYPE = {
+  RATE: 1,
+  FIXED: 2
+};
