@@ -14,7 +14,7 @@ export default function Game() {
   return (
     <main className="mt-[18px] flex flex-col gap-[60px] p-4">
       <div className="mr-[20px] mt-[36px] flex justify-end">
-        <Link href="blog/create">
+        <Link href="/blog/create">
           <Button type="button">
             <span className="ml-[5px] text-[16px]">Add</span>
           </Button>
