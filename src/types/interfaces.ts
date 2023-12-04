@@ -15,6 +15,12 @@ interface IJobSkill {
   description: string;
 }
 
+interface IJobService {
+  _id: string;
+  name: string;
+  description: string;
+}
+
 interface IJobBudget {
   _id: string;
   name: string;
