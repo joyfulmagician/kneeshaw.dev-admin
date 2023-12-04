@@ -30,7 +30,7 @@ interface IJobDatabase {
 interface IJobBudget {
   _id: string;
   name: string;
-  type: string;
+  type: number;
   min: number;
   max: number;
 }
