@@ -11,10 +11,9 @@ import {
   TableRow
 } from "@/components/ui/table";
 import { getAllJobExperiences } from "@/app/api/JobExperienceService";
-
-import JobExperienceCreateDialog from "./CreateDialog";
-import JobExperienceEditDialog from "./EditDialog";
-import JobExperienceDeleteDialog from "./DeleteDialog";
+import JobExperienceCreateDialog from "@/components/job/experience/CreateDialog";
+import JobExperienceEditDialog from "@/components/job/experience/EditDialog";
+import JobExperienceDeleteDialog from "@/components/job/experience/DeleteDialog";
 
 export default function JobExperiencesList() {
   const [experiences, setExperiences] = useState<IJobExperience[]>([]);

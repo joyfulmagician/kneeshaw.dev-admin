@@ -1,15 +1,15 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { toast } from "react-toastify";
 
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { JOB_BUDGET_TYPE } from "@/utils/constants";
 import {
   getJobBudgetByType,
   updateJobBudget
 } from "@/app/api/JobBudgetService";
-import { JOB_BUDGET_TYPE } from "@/utils/constants";
-import { toast } from "react-toastify";
 
 export default function JobBudget() {
   const [rateValues, setRateValues] = useState<IJobBudget | null>(null);

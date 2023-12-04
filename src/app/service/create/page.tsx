@@ -1,11 +1,11 @@
 import { Metadata } from "next";
 
-import { SITE_TITLE } from "@/utils/constants";
 import CreateService from "@/components/services/CreateService";
+import { SITE_TITLE } from "@/utils/constants";
 
 export const metadata: Metadata = {
-  title: `${SITE_TITLE} - Service Create`,
-  description: `${SITE_TITLE} - Service Create`
+  title: `${SITE_TITLE} - Create Service`,
+  description: `${SITE_TITLE} - Create Service`
 };
 
 export default function AddService() {
