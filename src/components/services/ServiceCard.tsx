@@ -12,7 +12,7 @@ interface Props {
 
 export default function ServiceCard({ image, title, description }: Props) {
   return (
-    <div className="relative flex h-auto w-[200px] flex-col border pb-[10px] text-center">
+    <div className="relative flex h-auto w-[200px] flex-col rounded-[10px] border pb-[10px] text-center">
       <img
         src={image}
         alt={title}
