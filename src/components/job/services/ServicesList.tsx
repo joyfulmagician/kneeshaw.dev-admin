@@ -15,8 +15,6 @@ import { getAllJobServices } from "@/app/api/JobServiceService";
 import JobServiceCreateDialog from "./CreateDialog";
 import JobServiceEditDialog from "./EditDialog";
 import JobServiceDeleteDialog from "./DeleteDialog";
-import { Button } from "@/components/ui/button";
-import { FaPlus } from "react-icons/fa";
 
 export default function JobServicesList() {
   const [services, setServices] = useState<IJobService[]>([]);
@@ -63,7 +61,7 @@ export default function JobServicesList() {
             <TableRow key={service._id}>
               <TableCell className="font-medium">{index + 1}</TableCell>
               <TableCell>{service.name}</TableCell>
-              <TableCell>{service.description}</TableCell>
+              <TableCell className="text-left">{service.description}</TableCell>
               <TableCell className="flex flex-row items-center justify-center gap-[20px]">
                 <JobServiceEditDialog
                   id={service._id}
