@@ -85,7 +85,7 @@ export default function Service() {
   return (
     <main className="mt-[24px] flex flex-col gap-[60px] p-4">
       <div className="mr-[20px] flex justify-end">
-        <Link href="service/create">
+        <Link href="/service/create">
           <Button type="button">
             <FaPlus className="text-md" />
             <span className="ml-[5px] text-[16px]">Add</span>
