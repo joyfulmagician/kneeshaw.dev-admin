@@ -34,7 +34,7 @@ export default function JobPeriodEditDialog({
     minTerm: number;
     maxTerm: number;
     description: string;
-  }>({ name: "", minTerm: 0, maxTerm: 10, description: "" });
+  }>({ name: "", minTerm: 0, maxTerm: 0, description: "" });
 
   const handleFieldChange =
     (field: string) => (e: React.ChangeEvent<HTMLInputElement>) => {
