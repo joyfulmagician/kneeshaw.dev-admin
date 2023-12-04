@@ -11,10 +11,9 @@ import {
   TableRow
 } from "@/components/ui/table";
 import { getAllJobScopes } from "@/app/api/JobScopeService";
-
-import JobScopeCreateDialog from "./CreateDialog";
-import JobScopeEditDialog from "./EditDialog";
-import JobScopeDeleteDialog from "./DeleteDialog";
+import JobScopeCreateDialog from "@/components/job/scope/CreateDialog";
+import JobScopeEditDialog from "@/components/job/scope/EditDialog";
+import JobScopeDeleteDialog from "@/components/job/scope/DeleteDialog";
 
 export default function JobScopesList() {
   const [scopes, setScopes] = useState<IJobScope[]>([]);

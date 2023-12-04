@@ -1,11 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-
-import { MdDeleteOutline } from "react-icons/md";
 import { toast } from "react-toastify";
+import { MdDeleteOutline } from "react-icons/md";
 
-import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogClose,
@@ -15,13 +13,10 @@ import {
   DialogTitle,
   DialogTrigger
 } from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import {
-  deleteJobPeriod,
-  getJobPeriod,
-  updateJobPeriod
-} from "@/app/api/JobPeriodService";
+import { deleteJobPeriod, getJobPeriod } from "@/app/api/JobPeriodService";
 
 interface JobPeriodDeleteDialogProps {
   id: string;

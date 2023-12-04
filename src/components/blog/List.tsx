@@ -2,9 +2,9 @@
 
 import Link from "next/link";
 import { FaPlus } from "react-icons/fa";
-import { Button } from "@/components/ui/button";
 
-import BlogCard from "./Card";
+import { Button } from "@/components/ui/button";
+import BlogCard from "@/components/blog/Card";
 
 export default function BlogList() {
   const cards = [

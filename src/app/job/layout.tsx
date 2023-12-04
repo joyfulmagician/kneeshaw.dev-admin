@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 
-import { SITE_TITLE } from "@/utils/constants";
 import TabBar from "@/components/job/TabBar";
 import Layout from "@/components/layout";
+import { SITE_TITLE } from "@/utils/constants";
 
 export const metadata: Metadata = {
   title: `${SITE_TITLE} - Layout`,

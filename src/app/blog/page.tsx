@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 
 import BlogList from "@/components/blog/List";
-
 import { SITE_TITLE } from "@/utils/constants";
 
 export const metadata: Metadata = {
