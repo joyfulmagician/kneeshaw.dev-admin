@@ -1,6 +1,8 @@
 "use client";
 
 import { Button } from "../ui/button";
+import { HiOutlinePencilSquare } from "react-icons/hi2";
+import { MdDeleteOutline } from "react-icons/md";
 
 interface Props {
   image: string;
@@ -24,11 +26,11 @@ export default function ServiceCard({ image, title, description }: Props) {
         <p className="text-[12px]">{description}</p>
       </div>
       <div className="flex flex-row items-center justify-around">
-        <Button variant="secondary" className="w-[70px] border bg-transparent">
-          Edit
+        <Button className="bg-transparent hover:border hover:bg-transparent">
+          <HiOutlinePencilSquare className="text-lg text-black" />
         </Button>
-        <Button variant="secondary" className="w-[70px] border bg-transparent">
-          Delete
+        <Button className="bg-transparent hover:border hover:bg-transparent">
+          <MdDeleteOutline className="text-xl text-black" />
         </Button>
       </div>
     </div>
