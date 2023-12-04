@@ -33,6 +33,12 @@ interface IJobScope {
   description: string;
 }
 
+interface IJobExperience {
+  _id: string;
+  name: string;
+  description: string;
+}
+
 interface IJobBudget {
   _id: string;
   name: string;
