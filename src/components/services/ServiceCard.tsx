@@ -10,7 +10,7 @@ interface Props {
 
 export default function ServiceCard({ image, title, description }: Props) {
   return (
-    <div className="relative flex h-auto w-[200px] flex-col bg-gray-100 pb-[10px] text-center">
+    <div className="relative flex h-auto w-[200px] flex-col border pb-[10px] text-center">
       <img
         src={image}
         alt={title}
@@ -24,10 +24,10 @@ export default function ServiceCard({ image, title, description }: Props) {
         <p className="text-[12px]">{description}</p>
       </div>
       <div className="flex flex-row items-center justify-around">
-        <Button variant="secondary" className="w-[70px] border">
+        <Button variant="secondary" className="w-[70px] border bg-transparent">
           Edit
         </Button>
-        <Button variant="secondary" className="w-[70px] border">
+        <Button variant="secondary" className="w-[70px] border bg-transparent">
           Delete
         </Button>
       </div>
