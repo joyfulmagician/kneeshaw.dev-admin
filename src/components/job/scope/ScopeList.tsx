@@ -61,7 +61,7 @@ export default function JobScopesList() {
             <TableRow key={scope._id}>
               <TableCell className="font-medium">{index + 1}</TableCell>
               <TableCell>{scope.name}</TableCell>
-              <TableCell>{scope.description}</TableCell>
+              <TableCell className="text-left">{scope.description}</TableCell>
               <TableCell className="flex flex-row items-center justify-center gap-[20px]">
                 <JobScopeEditDialog id={scope._id} onUpdated={handleUpdated} />
 
