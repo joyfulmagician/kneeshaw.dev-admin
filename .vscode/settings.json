@@ -1,0 +1,29 @@
+{
+  "cSpell.words": [
+    "clsx",
+    "Daaps",
+    "elopment",
+    "gameplay",
+    "hookform",
+    "kneeshaw",
+    "Koronos",
+    "Laravel",
+    "lucide",
+    "maxium",
+    "NEXTAUTH",
+    "Parens",
+    "signin",
+    "tailwindcss",
+    "toastify"
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.format": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.tabSize": 2,
+  "prettier.configPath": ".prettierrc.json"
+}
