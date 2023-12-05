@@ -2,9 +2,10 @@ import { Metadata } from "next";
 
 import { SITE_TITLE } from "@/utils/constants";
 import CreateGame from "@/components/game/CreateGame";
+
 export const metadata: Metadata = {
-  title: `${SITE_TITLE} - Create Blog`,
-  description: `${SITE_TITLE} - Create Blog`
+  title: `${SITE_TITLE} - Create Game`,
+  description: `${SITE_TITLE} - Create Game`
 };
 
 export default function AddGame() {

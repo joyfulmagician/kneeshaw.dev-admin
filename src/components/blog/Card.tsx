@@ -57,7 +57,7 @@ export default function BlogCard({
         </Link>
       </div>
 
-      <div className="flex flex-row items-center justify-around">
+      <div className="flex flex-row items-center justify-around py-[5px]">
         <Button className="bg-transparent hover:border hover:bg-transparent">
           <HiOutlinePencilSquare className="text-lg text-black" />
         </Button>

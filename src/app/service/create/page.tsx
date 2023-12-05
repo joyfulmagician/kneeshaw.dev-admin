@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function AddService() {
   return (
-    <section className="p-[150px]">
+    <section className="flex flex-1 flex-col items-center justify-center px-[32px]">
       <CreateService />
     </section>
   );
