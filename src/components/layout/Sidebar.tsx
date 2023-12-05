@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+
 "use client";
 
 import Link from "next/link";
@@ -83,6 +85,7 @@ export default function Sidebar() {
         >
           Settings
         </Link>
+
         <Link
           href=""
           onClick={(e) => {

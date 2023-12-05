@@ -20,9 +20,8 @@ import {
   FormMessage
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import Logo from "../layout/Logo";
-
 import { SESSION_STATUS } from "@/utils/constants";
+import Logo from "../layout/Logo";
 
 const formSchema = z.object({
   email: z

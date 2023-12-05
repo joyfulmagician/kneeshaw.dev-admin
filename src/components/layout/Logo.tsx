@@ -10,7 +10,7 @@ export default function Logo({ disableLink }: LogoProps) {
   const logoImg = (
     <img
       className="min-h-[86px] min-w-[192px]"
-      src={"/logo/logo-black.png"}
+      src="/logo/logo-black.png"
       alt="Logo"
     />
   );

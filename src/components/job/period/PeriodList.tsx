@@ -14,6 +14,7 @@ import { getAllJobPeriods } from "@/app/api/JobPeriodService";
 import JobPeriodCreateDialog from "@/components/job/period/CreateDialog";
 import JobPeriodEditDialog from "@/components/job/period/EditDialog";
 import JobPeriodDeleteDialog from "@/components/job/period/DeleteDialog";
+import { IJobPeriod } from "@/types/interfaces";
 
 export default function JobPeriodsList() {
   const [periods, setPeriods] = useState<IJobPeriod[]>([]);

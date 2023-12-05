@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 
+import Link from "next/link";
+import { HiOutlinePencilSquare } from "react-icons/hi2";
 import {
   Table,
   TableBody,
@@ -14,7 +16,7 @@ import { getAllUsers } from "@/app/api/User";
 import { IUser } from "@/types/interfaces";
 
 import UserDeleteDialog from "./DeleteDialog";
-import UserEditDialog from "./EditDialog";
+import { Button } from "../ui/button";
 
 export default function UsersList() {
   const [users, setUsers] = useState<IUser[]>([]);
@@ -58,7 +60,6 @@ export default function UsersList() {
               <TableCell>{user.userName}</TableCell>
               <TableCell>{user.role}</TableCell>
               <TableCell className="flex flex-row items-center justify-center gap-[20px]">
-                {/* <UserEditDialog id={user._id} onUpdated={handleUpdated} /> */}
                 <Link id={user._id} href={`/user/${user._id}`}>
                   <Button className="bg-transparent hover:border hover:bg-transparent">
                     <HiOutlinePencilSquare className="text-lg text-black" />

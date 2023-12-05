@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/table";
 import { getAllJobSkills } from "@/app/api/JobSkillService";
 
+import { IJobSkill } from "@/types/interfaces";
 import JobSkillCreateDialog from "./CreateDialog";
 import JobSkillEditDialog from "./EditDialog";
 import JobSkillDeleteDialog from "./DeleteDialog";

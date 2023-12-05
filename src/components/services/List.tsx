@@ -4,10 +4,11 @@ import Link from "next/link";
 
 import { FaPlus } from "react-icons/fa";
 
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import ServiceCard from "@/components/services/ServiceCard";
-import { useEffect, useState } from "react";
 import { getAllServices } from "@/app/api/ServiceService";
+import { IService } from "@/types/interfaces";
 
 export default function ServiceList() {
   const [services, setServices] = useState<IService[]>([]);

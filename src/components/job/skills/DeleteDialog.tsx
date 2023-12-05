@@ -17,11 +17,7 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import {
-  deleteJobSkill,
-  getJobSkill,
-  updateJobSkill
-} from "@/app/api/JobSkillService";
+import { deleteJobSkill, getJobSkill } from "@/app/api/JobSkillService";
 
 interface JobSkillDeleteDialogProps {
   id: string;

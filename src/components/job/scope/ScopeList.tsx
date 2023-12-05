@@ -14,6 +14,7 @@ import { getAllJobScopes } from "@/app/api/JobScopeService";
 import JobScopeCreateDialog from "@/components/job/scope/CreateDialog";
 import JobScopeEditDialog from "@/components/job/scope/EditDialog";
 import JobScopeDeleteDialog from "@/components/job/scope/DeleteDialog";
+import { IJobScope } from "@/types/interfaces";
 
 export default function JobScopesList() {
   const [scopes, setScopes] = useState<IJobScope[]>([]);

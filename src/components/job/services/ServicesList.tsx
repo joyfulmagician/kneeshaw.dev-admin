@@ -14,6 +14,7 @@ import { getAllJobServices } from "@/app/api/JobServiceService";
 import JobServiceCreateDialog from "@/components/job/services/CreateDialog";
 import JobServiceEditDialog from "@/components/job/services/EditDialog";
 import JobServiceDeleteDialog from "@/components/job/services/DeleteDialog";
+import { IJobService } from "@/types/interfaces";
 
 export default function JobServicesList() {
   const [services, setServices] = useState<IJobService[]>([]);
