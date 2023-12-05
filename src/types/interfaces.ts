@@ -1,5 +1,9 @@
 export interface IUser {
   _id: string;
+  image: {
+    data: Buffer;
+    contentType: String;
+  };
   email: string;
   userName: string;
   firstName: string;
