@@ -4,14 +4,14 @@ import Link from "next/link";
 import { FaPlus } from "react-icons/fa";
 
 import { Button } from "@/components/ui/button";
-import GameCard from "@/components/game/Card";
-
-export default function BlogList() {
+import GameCard from "./Card";
+export default function GameList() {
   const cards = [
     {
-      image: "/images/game/image01.png",
-      title: "Titan Saga: Chains of Kronos",
-      subtitle: "Purchased"
+      image: "/images/image01.png",
+      title: "Titan Saga",
+      description: "Reaches of Koro Nos",
+      price: 123
     }
   ];
 
@@ -32,7 +32,8 @@ export default function BlogList() {
             key={props.title}
             image={props.image}
             title={props.title}
-            subtitle={props.subtitle}
+            description={props.description}
+            price={props.price}
           />
         ))}
       </div>

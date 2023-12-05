@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: `${SITE_TITLE} - Create Game`
 };
 
-export default function AddBlog() {
+export default function AddGame() {
   return (
     <section className="p-4">
       <CreateGame />

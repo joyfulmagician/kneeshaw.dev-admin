@@ -24,10 +24,6 @@ export default function UsersList() {
     setUsers(res.data.data);
   };
 
-  const handleUpdated = () => {
-    initialize();
-  };
-
   const handleDeleted = () => {
     initialize();
   };
@@ -62,7 +58,13 @@ export default function UsersList() {
               <TableCell>{user.userName}</TableCell>
               <TableCell>{user.role}</TableCell>
               <TableCell className="flex flex-row items-center justify-center gap-[20px]">
-                <UserEditDialog id={user._id} onUpdated={handleUpdated} />
+                {/* <UserEditDialog id={user._id} onUpdated={handleUpdated} /> */}
+                <Link id={user._id} href={`/user/${user._id}`}>
+                  <Button className="bg-transparent hover:border hover:bg-transparent">
+                    <HiOutlinePencilSquare className="text-lg text-black" />
+                  </Button>
+                </Link>
+
                 <UserDeleteDialog id={user._id} onDeleted={handleDeleted} />
               </TableCell>
             </TableRow>

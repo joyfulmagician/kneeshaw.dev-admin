@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: `${SITE_TITLE} - Game`
 };
 
-export default function Blog() {
+export default function Game() {
   return (
     <main className="mt-[18px] flex flex-col gap-[60px] p-4">
       <GameList />
