@@ -4,7 +4,7 @@ import { redirect } from "next/navigation";
 
 import { SITE_TITLE } from "@/utils/constants";
 import SignInForm from "@/components/signin/SignInForm";
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import authOptions from "@/app/api/auth/[...nextauth]/option";
 
 export const metadata: Metadata = {
   title: `${SITE_TITLE} - Sign In`,

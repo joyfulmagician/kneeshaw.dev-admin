@@ -12,7 +12,11 @@ const getAllServices = () => axiosInstance.get(`/service`);
 const getService = (id: string) => axiosInstance.get(`/service/${id}`);
 
 const updateService = (id: string, data: any) =>
-  axiosInstance.put(`/service/${id}`, data);
+  axiosInstance.put(`/service/${id}`, data, {
+    headers: {
+      "Content-Type": "multipart/form-data"
+    }
+  });
 
 const deleteService = (id: string) => axiosInstance.delete(`/service/${id}`);
 
