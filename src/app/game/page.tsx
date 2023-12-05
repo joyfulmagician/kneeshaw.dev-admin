@@ -1,9 +1,8 @@
 import { Metadata } from "next";
 
-import { SITE_TITLE } from "@/utils/constants";
 import GameList from "@/components/game/List";
+import { SITE_TITLE } from "@/utils/constants";
 
-import Link from "next/link";
 export const metadata: Metadata = {
   title: `${SITE_TITLE} - Game`,
   description: `${SITE_TITLE} - Game`

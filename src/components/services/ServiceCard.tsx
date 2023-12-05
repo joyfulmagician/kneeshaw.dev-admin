@@ -1,18 +1,28 @@
 "use client";
 
-import { Button } from "../ui/button";
 import { HiOutlinePencilSquare } from "react-icons/hi2";
-import { MdDeleteOutline } from "react-icons/md";
+
+import { Button } from "../ui/button";
+import Link from "next/link";
+import ServiceDeleteDialog from "./DeleteDialog";
 
 interface Props {
+  id: string;
   image: string;
   title: string;
   description: string;
+  onDeleted: () => void;
 }
 
-export default function ServiceCard({ image, title, description }: Props) {
+export default function ServiceCard({
+  id,
+  image,
+  title,
+  description,
+  onDeleted
+}: Props) {
   return (
-    <div className="relative flex h-auto w-[200px] flex-col border pb-[10px] text-center">
+    <div className="relative flex h-auto w-[200px] flex-col rounded-[10px] border pb-[10px] text-center">
       <img
         src={image}
         alt={title}
@@ -28,13 +38,13 @@ export default function ServiceCard({ image, title, description }: Props) {
       </div>
 
       <div className="flex flex-row items-center justify-around">
-        <Button className="bg-transparent hover:border hover:bg-transparent">
-          <HiOutlinePencilSquare className="text-lg text-black" />
-        </Button>
+        <Link href={`/service/${id}`}>
+          <Button variant="outline">
+            <HiOutlinePencilSquare className="text-lg text-black" />
+          </Button>
+        </Link>
 
-        <Button className="bg-transparent hover:border hover:bg-transparent">
-          <MdDeleteOutline className="text-xl text-black" />
-        </Button>
+        <ServiceDeleteDialog id={id} onDeleted={onDeleted} />
       </div>
     </div>
   );
