@@ -7,7 +7,11 @@ const getAllUsers = () => axiosInstance.get(`/user`);
 const getUser = (id: string) => axiosInstance.get(`/user/${id}`);
 
 const updateUser = (id: string, data: any) =>
-  axiosInstance.put(`/user/${id}`, data);
+  axiosInstance.put(`/user/${id}`, data, {
+    headers: {
+      "Content-Type": "multipart/form-data"
+    }
+  });
 
 const deleteUser = (id: string) => axiosInstance.delete(`/user/${id}`);
 
