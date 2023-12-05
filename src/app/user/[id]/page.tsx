@@ -6,7 +6,15 @@ export const metadata: Metadata = {
   title: `${SITE_TITLE} - User`,
   description: `${SITE_TITLE} - User`
 };
-
-export default function UserEdit({ params }: { params: { id: number } }) {
-  return <main></main>;
+import UserEdit from "@/components/user/UserEdit";
+interface EditUserProps {
+  id: string;
+  onUpdated: () => void;
+}
+export default function EditUser({ params }: { params: { id: string } }) {
+  return (
+    <section>
+      <UserEdit />
+    </section>
+  );
 }
