@@ -66,12 +66,6 @@ export default function UserEditDialog({ id, onUpdated }: UserEditDialogProps) {
     shipping: { firstName: "", lastName: "", card: "" },
     credit: { firstName: "", lastName: "", card: "" }
   });
-  const [selectedStatus, setSelectedStatus] = useState(values.status);
-
-  const handleSelect = (value: any) => {
-    setSelectedStatus(value);
-    // Do something with the selected value...
-  };
 
   const handleFieldChange =
     (field: string) => (e: React.ChangeEvent<HTMLInputElement>) => {
