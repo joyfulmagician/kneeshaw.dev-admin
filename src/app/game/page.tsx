@@ -1,8 +1,7 @@
 import { Metadata } from "next";
 
 import { SITE_TITLE } from "@/utils/constants";
-import Card from "@/components/game/Card";
-import { Button } from "@/components/ui/button";
+import GameList from "@/components/game/List";
 
 import Link from "next/link";
 export const metadata: Metadata = {
@@ -13,17 +12,7 @@ export const metadata: Metadata = {
 export default function Game() {
   return (
     <main className="mt-[18px] flex flex-col gap-[60px] p-4">
-      <div className="mr-[20px] mt-[36px] flex justify-end">
-        <Link href="/game/create">
-          <Button type="button">
-            <span className="ml-[5px] text-[16px]">Add</span>
-          </Button>
-        </Link>
-      </div>
-
-      <div className="flex flex-wrap gap-[60px]">
-        <Card />
-      </div>
+      <GameList />
     </main>
   );
 }
