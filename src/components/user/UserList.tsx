@@ -1,35 +1,20 @@
 "use client";
-import { useEffect, useState } from "react";
 
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { FaPlus } from "react-icons/fa";
+import { useEffect, useState } from "react";
 
 import {
   Table,
   TableBody,
-  TableCaption,
   TableCell,
   TableHead,
   TableHeader,
   TableRow
 } from "@/components/ui/table";
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTrigger
-} from "@/components/ui/alert-dialog";
+import { getAllUsers } from "@/app/api/User";
+import { IUser } from "@/types/interfaces";
 
 import UserDeleteDialog from "./DeleteDialog";
 import UserEditDialog from "./EditDialog";
-import { getAllUsers } from "@/app/api/User";
-import { HiOutlinePencilSquare } from "react-icons/hi2";
-import { MdDeleteOutline } from "react-icons/md";
 
 export default function UsersList() {
   const [users, setUsers] = useState<IUser[]>([]);
@@ -61,7 +46,7 @@ export default function UsersList() {
             <TableHead className="w-[15%] text-center">Email</TableHead>
             <TableHead className="w-[15%] text-center">UserName</TableHead>
             <TableHead className="w-[15%] text-center">Role</TableHead>
-            <TableHead colSpan={2} className="w-[15%] text-center"></TableHead>
+            <TableHead colSpan={2} className="w-[15%] text-center" />
           </TableRow>
         </TableHeader>
 

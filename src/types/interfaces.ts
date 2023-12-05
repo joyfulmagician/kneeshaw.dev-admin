@@ -1,4 +1,4 @@
-interface IUser {
+export interface IUser {
   _id: string;
   email: string;
   userName: string;
@@ -21,7 +21,7 @@ interface IUser {
   };
 }
 
-interface IService {
+export interface IService {
   _id: string;
   image: {
     data: Buffer;
@@ -31,31 +31,31 @@ interface IService {
   description: string;
 }
 
-interface IJobSkill {
+export interface IJobSkill {
   _id: string;
   name: string;
   description: string;
 }
 
-interface IJobService {
+export interface IJobService {
   _id: string;
   name: string;
   description: string;
 }
 
-interface IJobDatabase {
+export interface IJobDatabase {
   _id: string;
   name: string;
   description: string;
 }
 
-interface IJobScope {
+export interface IJobScope {
   _id: string;
   name: string;
   description: string;
 }
 
-interface IJobPeriod {
+export interface IJobPeriod {
   _id: string;
   name: string;
   minTerm: number;
@@ -63,13 +63,13 @@ interface IJobPeriod {
   description: string;
 }
 
-interface IJobExperience {
+export interface IJobExperience {
   _id: string;
   name: string;
   description: string;
 }
 
-interface IJobBudget {
+export interface IJobBudget {
   _id: string;
   name: string;
   type: number;

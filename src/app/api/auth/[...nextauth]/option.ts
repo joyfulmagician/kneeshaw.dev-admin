@@ -2,6 +2,7 @@ import { NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 
 import axiosInstance from "@/app/api/axiosInstance";
+import { IUser } from "@/types/interfaces";
 
 const authOptions: NextAuthOptions = {
   secret: process.env.NEXTAUTH_SECRET,
@@ -45,6 +46,8 @@ const authOptions: NextAuthOptions = {
         } catch (e) {
           throw new Error("Email or password is incorrect");
         }
+
+        return null;
       }
     })
   ],
@@ -59,7 +62,7 @@ const authOptions: NextAuthOptions = {
       return token;
     },
 
-    async session({ session, token, user }) {
+    async session({ session, token }) {
       session.user = token.user as IUser;
       session.accessToken = token.accessToken as string;
 
