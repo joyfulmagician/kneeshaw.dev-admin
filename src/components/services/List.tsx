@@ -17,6 +17,10 @@ export default function ServiceList() {
     setServices(res.data.data);
   };
 
+  const handleDeleted = () => {
+    initialize();
+  };
+
   useEffect(() => {
     initialize();
   }, []);
@@ -36,11 +40,13 @@ export default function ServiceList() {
         {services?.map((s) => (
           <ServiceCard
             key={s._id}
+            id={s._id}
             image={`data:${s.image.contentType};base64,${Buffer.from(
               s.image.data
             ).toString("base64")}`}
             title={s.title}
             description={s.description}
+            onDeleted={handleDeleted}
           />
         ))}
       </div>
