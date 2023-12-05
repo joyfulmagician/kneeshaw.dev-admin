@@ -23,22 +23,22 @@ export default function CreateBlog() {
       <div className="flex flex-col gap-[12px]">
         <div className="flex items-center gap-[18px]">
           <p className="w-[100px] text-center">Image:</p>
-          <Input type="text" className="w-[500px]"></Input>
+          <Input type="text" className="w-[500px]" />
         </div>
 
         <div className="flex items-center gap-[18px]">
           <p className="w-[100px] text-center">Title:</p>
-          <Input type="text" className="w-[500px]"></Input>
+          <Input type="text" className="w-[500px]" />
         </div>
 
         <div className="flex items-center gap-[18px]">
           <p className="w-[100px] text-center">Subtitle:</p>
-          <Input type="text" className="w-[500px]"></Input>
+          <Input type="text" className="w-[500px]" />
         </div>
 
         <div className="flex items-center gap-[18px]">
           <p className="w-[100px] text-center">Description:</p>
-          <Input type="text" className="w-[500px]"></Input>
+          <Input type="text" className="w-[500px]" />
         </div>
       </div>
     </div>

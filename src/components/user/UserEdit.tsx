@@ -2,15 +2,15 @@
 
 import { useEffect, useState } from "react";
 
+import { toast } from "react-toastify";
+import Link from "next/link";
+import { useParams, useRouter } from "next/navigation";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { USER_STATUS } from "@/utils/constants";
 import { getUser, updateUser } from "@/app/api/User";
-import { toast } from "react-toastify";
-import Link from "next/link";
-import { useParams } from "next/navigation";
-import { useRouter } from "next/navigation";
+
 import {
   Select,
   SelectContent,
@@ -22,7 +22,6 @@ import {
 export default function UserEdit() {
   const { id } = useParams();
   const router = useRouter();
-  console.log(id);
 
   const [values, setValues] = useState<{
     email: string;
@@ -79,7 +78,7 @@ export default function UserEdit() {
 
   const handleSaveClick = async () => {
     try {
-      await updateUser(id, values);
+      await updateUser(String(id), values);
       toast("User updated successfully.", { type: "success" });
     } catch (err: any) {
       toast(err.response.data.message, { type: "error" });
@@ -87,10 +86,9 @@ export default function UserEdit() {
     }
   };
 
-  console.log(id);
   const initialize = async () => {
     try {
-      const res = await getUser(id);
+      const res = await getUser(String(id));
       setValues({
         email: res.data.data.email,
         userName: res.data.data.userName,
@@ -185,7 +183,7 @@ export default function UserEdit() {
             </SelectContent>
           </Select>
         </div>
-        <div className="ml-[10%] border-[1px]"></div>
+        <div className="ml-[10%] border-[1px]" />
         <Label htmlFor="shipping" className="mt-[10px] text-left">
           shipping Card;
         </Label>
@@ -211,7 +209,7 @@ export default function UserEdit() {
             onChange={handleShippingChange("card")}
           />
         </div>
-        <div className="ml-[10%] border-[1px]"></div>
+        <div className="ml-[10%] border-[1px]" />
 
         <Label htmlFor="credit" className="mt-[10px] text-left">
           Credit Card;
@@ -231,7 +229,7 @@ export default function UserEdit() {
           />
         </div>
         <div className="grid grid-cols-4 items-center gap-4">
-          <Label htmlFor="credit.card" className="text-right"></Label>
+          <Label htmlFor="credit.card" className="text-right" />
           <Input
             id="credit.card"
             className="col-span-12"

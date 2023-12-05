@@ -16,11 +16,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import {
-  deleteJobScope,
-  getJobScope,
-  updateJobScope
-} from "@/app/api/JobScopeService";
+import { deleteJobScope, getJobScope } from "@/app/api/JobScopeService";
 
 interface JobScopeDeleteDialogProps {
   id: string;

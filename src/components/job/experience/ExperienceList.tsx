@@ -14,6 +14,7 @@ import { getAllJobExperiences } from "@/app/api/JobExperienceService";
 import JobExperienceCreateDialog from "@/components/job/experience/CreateDialog";
 import JobExperienceEditDialog from "@/components/job/experience/EditDialog";
 import JobExperienceDeleteDialog from "@/components/job/experience/DeleteDialog";
+import { IJobExperience } from "@/types/interfaces";
 
 export default function JobExperiencesList() {
   const [experiences, setExperiences] = useState<IJobExperience[]>([]);

@@ -10,6 +10,7 @@ import {
   getJobBudgetByType,
   updateJobBudget
 } from "@/app/api/JobBudgetService";
+import { IJobBudget } from "@/types/interfaces";
 
 export default function JobBudget() {
   const [rateValues, setRateValues] = useState<IJobBudget | null>(null);

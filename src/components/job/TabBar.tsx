@@ -1,7 +1,8 @@
 "use client";
 
-import { Tabs, TabsList, TabsTrigger } from "../ui/tabs";
 import { usePathname, useRouter } from "next/navigation";
+
+import { Tabs, TabsList, TabsTrigger } from "../ui/tabs";
 
 export default function TabBar() {
   const router = useRouter();

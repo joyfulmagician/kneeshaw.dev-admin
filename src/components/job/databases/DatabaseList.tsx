@@ -14,6 +14,7 @@ import { getAllJobDatabases } from "@/app/api/JobDatabaseService";
 import JobDatabaseCreateDialog from "@/components/job/databases/CreateDialog";
 import JobDatabaseEditDialog from "@/components/job/databases/EditDialog";
 import JobDatabaseDeleteDialog from "@/components/job/databases/DeleteDialog";
+import { IJobDatabase } from "@/types/interfaces";
 
 export default function JobDatabasesList() {
   const [databases, setDatabases] = useState<IJobDatabase[]>([]);

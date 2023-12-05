@@ -15,9 +15,7 @@ import {
   DialogTitle,
   DialogTrigger
 } from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { deleteUser, getUser, updateUser } from "@/app/api/User";
+import { deleteUser, getUser } from "@/app/api/User";
 
 interface UserDeleteDialogProps {
   id: string;
