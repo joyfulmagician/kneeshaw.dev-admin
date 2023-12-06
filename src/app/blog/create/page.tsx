@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
-import { SITE_TITLE } from "@/utils/constants";
 import CreateBlog from "@/components/blog/CreateBlog";
+import { SITE_TITLE } from "@/utils/constants";
 
 export const metadata: Metadata = {
   title: `${SITE_TITLE} - Create Blog`,
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function AddBlog() {
   return (
-    <section className="p-4">
+    <section className="flex flex-1 flex-col items-center justify-center px-[32px]">
       <CreateBlog />
     </section>
   );

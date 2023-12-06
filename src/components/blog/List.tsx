@@ -3,69 +3,27 @@
 import Link from "next/link";
 import { FaPlus } from "react-icons/fa";
 
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import BlogCard from "@/components/blog/Card";
+import BlogCard from "./BlogCard";
+import { getAllBlogs } from "@/app/api/Blog";
+import { IBlog } from "@/types/interfaces";
 
 export default function BlogList() {
-  const cards = [
-    {
-      image: "/images/blog/card01.png",
-      title: "Content update 0.4.2",
-      subtitle: "Patch notes",
-      paragraph:
-        "Forgotten Shore and the Dauntless Few Please Wishlist Titan Saga on Steam: Titan Saga: Chains of KronosOr purchase and play on VoxPop Games: Titan Saga: Chains of Kronos (ACT 1)..."
-    },
-    {
-      image: "/images/blog/card02.png",
-      title: "Content update 0.4.2",
-      subtitle: "Patch notes",
-      paragraph:
-        "Forgotten Shore and the Dauntless Few Please Wishlist Titan Saga on Steam: Titan Saga: Chains of KronosOr purchase and play on VoxPop Games: Titan Saga: Chains of Kronos (ACT 1)..."
-    },
-    {
-      image: "/images/blog/card03.png",
-      title: "Content update 0.4.2",
-      subtitle: "Patch notes",
-      paragraph:
-        "Forgotten Shore and the Dauntless Few Please Wishlist Titan Saga on Steam: Titan Saga: Chains of KronosOr purchase and play on VoxPop Games: Titan Saga: Chains of Kronos (ACT 1)..."
-    },
-    {
-      image: "/images/blog/card04.png",
-      title: "Content update 0.4.2",
-      subtitle: "Patch notes",
-      paragraph:
-        "Forgotten Shore and the Dauntless Few Please Wishlist Titan Saga on Steam: Titan Saga: Chains of KronosOr purchase and play on VoxPop Games: Titan Saga: Chains of Kronos (ACT 1)..."
-    },
-    {
-      image: "/images/blog/card05.png",
-      title: "Content update 0.4.2",
-      subtitle: "Patch notes",
-      paragraph:
-        "Forgotten Shore and the Dauntless Few Please Wishlist Titan Saga on Steam: Titan Saga: Chains of KronosOr purchase and play on VoxPop Games: Titan Saga: Chains of Kronos (ACT 1)..."
-    },
-    {
-      image: "/images/blog/card06.png",
-      title: "Content update 0.4.2",
-      subtitle: "Patch notes",
-      paragraph:
-        "Forgotten Shore and the Dauntless Few Please Wishlist Titan Saga on Steam: Titan Saga: Chains of KronosOr purchase and play on VoxPop Games: Titan Saga: Chains of Kronos (ACT 1)..."
-    },
-    {
-      image: "/images/blog/card07.png",
-      title: "Content update 0.4.2",
-      subtitle: "Patch notes",
-      paragraph:
-        "Forgotten Shore and the Dauntless Few Please Wishlist Titan Saga on Steam: Titan Saga: Chains of KronosOr purchase and play on VoxPop Games: Titan Saga: Chains of Kronos (ACT 1)..."
-    },
-    {
-      image: "/images/blog/card08.png",
-      title: "Content update 0.4.2",
-      subtitle: "Patch notes",
-      paragraph:
-        "Forgotten Shore and the Dauntless Few Please Wishlist Titan Saga on Steam: Titan Saga: Chains of KronosOr purchase and play on VoxPop Games: Titan Saga: Chains of Kronos (ACT 1)..."
-    }
-  ];
+  const [blogs, setBlogs] = useState<IBlog[]>([]);
 
+  const initialize = async () => {
+    const res = await getAllBlogs();
+    setBlogs(res.data.data);
+  };
+
+  const handleDeleted = () => {
+    initialize();
+  };
+
+  useEffect(() => {
+    initialize();
+  }, []);
   return (
     <>
       <div className="mr-[20px] mt-[36px] flex justify-end">
@@ -77,14 +35,17 @@ export default function BlogList() {
         </Link>
       </div>
 
-      <div className="flex flex-wrap justify-center gap-[50px]">
-        {cards.map((props) => (
+      <div className="flex flex-wrap justify-center gap-[60px]">
+        {blogs?.map((b) => (
           <BlogCard
-            key={props.title}
-            image={props.image}
-            title={props.title}
-            subtitle={props.subtitle}
-            description={props.paragraph}
+            key={b._id}
+            id={b._id}
+            image={`data:${b.image.contentType};base64,${Buffer.from(
+              b.image.data
+            ).toString("base64")}`}
+            title={b.title}
+            description={b.description}
+            onDeleted={handleDeleted}
           />
         ))}
       </div>

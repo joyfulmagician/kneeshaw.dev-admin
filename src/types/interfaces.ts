@@ -35,6 +35,16 @@ export interface IService {
   description: string;
 }
 
+export interface IBlog {
+  _id: string;
+  image: {
+    data: Buffer;
+    contentType: String;
+  };
+  title: string;
+  description: string;
+}
+
 export interface IJobSkill {
   _id: string;
   name: string;
