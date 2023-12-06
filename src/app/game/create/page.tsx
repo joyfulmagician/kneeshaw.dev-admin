@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
-import { SITE_TITLE } from "@/utils/constants";
 import CreateGame from "@/components/game/CreateGame";
+import { SITE_TITLE } from "@/utils/constants";
 
 export const metadata: Metadata = {
   title: `${SITE_TITLE} - Create Game`,
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function AddGame() {
   return (
-    <section className="p-4">
+    <section className="flex flex-1 flex-col items-center justify-center px-[32px]">
       <CreateGame />
     </section>
   );

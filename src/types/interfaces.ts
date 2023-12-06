@@ -45,6 +45,16 @@ export interface IBlog {
   description: string;
 }
 
+export interface IGame {
+  _id: string;
+  image: {
+    data: Buffer;
+    contentType: String;
+  };
+  title: string;
+  price: number;
+}
+
 export interface IJobSkill {
   _id: string;
   name: string;
